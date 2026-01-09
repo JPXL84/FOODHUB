@@ -1,33 +1,29 @@
-🍽️ Restaurant Ping API
+# Restaurant Control Plane – Bootstrap API
 
-A lightweight Node.js + Express API that serves restaurant/franchise data from a local JSON file and supports filtering, availability checks, and distance-based sorting.
+## Base URL
+http://localhost:3000/
 
-This project is designed to be:
+## Bootstrap API
 
-Simple
+### 1. Default Bootstrap (WEB client)
+```bash
+curl http://localhost:3000/bootstrap
+```
 
-Transparent
+### 2. Bootstrap for POS Client
+```bash
+curl -H "X-Client-Type: POS" http://localhost:3000/bootstrap
+```
 
-Fast
+### 3. Bootstrap for KIOSK Client
+```bash
+curl -H "X-Client-Type: KIOSK" http://localhost:3000/bootstrap
+```
 
-Easy to extend (distance ranking, best-match scoring, auth, etc.)
+### 4. Bootstrap for DELIVERY Client
+```bash
+curl -H "X-Client-Type: DELIVERY" http://localhost:3000/bootstrap
+```
 
-📦 Features
-
-Load restaurant data from data.json
-
-Health check endpoint
-
-Fetch all restaurants
-
-Fetch restaurant by ID
-
-Filter by:
-
-Open status
-
-Town
-
-Cuisine
-
-Distance-based sorting using latitude & longitude (Haversine formula)
+###  Any other client
+Defaults to WEB
