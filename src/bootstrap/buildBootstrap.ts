@@ -3,6 +3,8 @@ import { SYSTEM_DEFAULTS } from "./defaults";
 import { CLIENT_CAPABILITIES } from "./clientCapabilities";
 import { resolveFeatures } from "./plugins";
 import { normalizeClientType } from "./normalizeClientType";
+import { getApisForClient } from "./clientApiMap";
+import { META } from "../constants";
 
 export function buildBootstrap(ctx: BootstrapContext) {
   const clientType = normalizeClientType(ctx.clientType);
@@ -12,13 +14,14 @@ export function buildBootstrap(ctx: BootstrapContext) {
 
     client: {
       type: clientType,
-      capabilities: CLIENT_CAPABILITIES[clientType]
+      capabilities: CLIENT_CAPABILITIES[clientType],
+      apis: getApisForClient(clientType)
     },
 
     features: resolveFeatures({ clientType }),
 
     meta: {
-      version: "v1",
+      version: META.VERSION,
       generatedAt: new Date().toISOString()
     }
   };
