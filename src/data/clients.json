@@ -3,8 +3,14 @@
     "id": "client_kiosk_1",
     "type": "KIOSK",
     "status": "ACTIVE",
-    "apis": ["MENU", "PAYMENTS", "ONLINE_ORDERS"],
-    "features": ["pay_by_link"],
+    "apis": [
+      "MENU",
+      "PAYMENTS",
+      "ONLINE_ORDERS"
+    ],
+    "features": [
+      "pay_by_link"
+    ],
     "capabilities": {
       "canPlaceOrder": true,
       "canCancelOrder": false,
@@ -27,8 +33,17 @@
     "id": "client_web_1",
     "type": "WEB",
     "status": "ACTIVE",
-    "apis": ["STORE", "ORDERS", "DELIVERY", "ONLINE_ORDERS", "OFFLINE_ORDERS"],
-    "features": ["pay_by_link", "delivery_tracking"],
+    "apis": [
+      "STORE",
+      "ORDERS",
+      "DELIVERY",
+      "ONLINE_ORDERS",
+      "OFFLINE_ORDERS"
+    ],
+    "features": [
+      "pay_by_link",
+      "delivery_tracking"
+    ],
     "capabilities": {
       "canPlaceOrder": true,
       "canCancelOrder": true,
@@ -51,8 +66,16 @@
     "id": "client_pos_1",
     "type": "POS",
     "status": "ACTIVE",
-    "apis": ["MENU", "PAYMENTS", "ONLINE_ORDERS", "OFFLINE_ORDERS"],
-    "features": ["pay_by_link", "partial_refund"],
+    "apis": [
+      "MENU",
+      "PAYMENTS",
+      "ONLINE_ORDERS",
+      "OFFLINE_ORDERS"
+    ],
+    "features": [
+      "pay_by_link",
+      "partial_refund"
+    ],
     "capabilities": {
       "canPlaceOrder": true,
       "canCancelOrder": true,
@@ -75,8 +98,13 @@
     "id": "client_delivery_1",
     "type": "DELIVERY",
     "status": "ACTIVE",
-    "apis": ["DELIVERY", "DELIVERY_ORDERS"],
-    "features": ["delivery_tracking"],
+    "apis": [
+      "DELIVERY",
+      "DELIVERY_ORDERS"
+    ],
+    "features": [
+      "delivery_tracking"
+    ],
     "capabilities": {
       "canPlaceOrder": false,
       "canCancelOrder": false,
@@ -93,6 +121,21 @@
     "meta": {
       "createdAt": "2026-01-01T00:00:00Z",
       "updatedAt": "2026-01-08T10:15:00Z"
+    }
+  },
+  {
+    "id": "client_test_1",
+    "type": "WEB",
+    "status": "ACTIVE",
+    "apis": [
+      "STORE"
+    ],
+    "features": [],
+    "capabilities": {},
+    "devices": [],
+    "meta": {
+      "createdAt": "2026-01-10T00:00:00Z",
+      "updatedAt": "2026-01-10T00:00:00Z"
     }
   }
 ]
