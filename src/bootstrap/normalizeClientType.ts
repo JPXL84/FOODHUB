@@ -1,4 +1,4 @@
-import { ClientTypeEnum } from "../constants";
+import { ClientTypeEnum } from "../types/constants";
 
 export function normalizeClientType(
   input?: string

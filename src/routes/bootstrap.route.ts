@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { ClientTypeEnum } from "../constants";
-import { HEADERS } from "../constants";
-import { ROUTES } from "../constants";
+import { ClientTypeEnum } from "../types/constants";
+import { HEADERS } from "../types/constants";
+import { ROUTES } from "../types/constants";
 import { buildBootstrap } from "../bootstrap/buildBootstrap";
+import { apiResponse } from "../utils/apiResponses";
+
 
 export const router = Router();
 
@@ -14,5 +16,8 @@ router.get(ROUTES.BOOTSTRAP, (req, res) => {
 
   const response = buildBootstrap({ clientType });
 
-  res.json(response);
+  res.json(apiResponse(response, "Bootstrap loaded"));
 });
+
+
+export default router;

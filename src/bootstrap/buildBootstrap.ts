@@ -4,7 +4,7 @@ import { CLIENT_CAPABILITIES } from "./clientCapabilities";
 import { resolveFeatures } from "./plugins";
 import { normalizeClientType } from "./normalizeClientType";
 import { getApisForClient } from "./clientApiMap";
-import { META } from "../constants";
+import { META } from "../types/constants";
 
 export function buildBootstrap(ctx: BootstrapContext) {
   const clientType = normalizeClientType(ctx.clientType);

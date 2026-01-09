@@ -1,5 +1,5 @@
-import { ClientTypeEnum } from "../constants";
-import { FeatureKeyEnum } from "../constants";
+import { ClientTypeEnum } from "./constants";
+import { FeatureKeyEnum } from "./constants";
 
 export interface BootstrapContext {
   clientType: ClientTypeEnum;

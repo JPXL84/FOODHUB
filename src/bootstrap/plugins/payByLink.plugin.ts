@@ -1,5 +1,5 @@
-import { FeatureKeyEnum } from "../../constants";
-import { ClientTypeEnum } from "../../constants";
+import { FeatureKeyEnum } from "../../types/constants";
+import { ClientTypeEnum } from "../../types/constants";
 import { FeaturePlugin, BootstrapContext } from "../../types/bootstrap";
 
 export class PayByLinkPlugin implements FeaturePlugin {

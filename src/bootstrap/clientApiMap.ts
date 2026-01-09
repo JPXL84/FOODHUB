@@ -1,6 +1,6 @@
 import { loadJson } from "../utils/loadJson";
-import { ClientTypeEnum } from "../constants";
-import { ApiNameEnum } from "../constants";
+import { ClientTypeEnum } from "../types/constants";
+import { ApiNameEnum } from "../types/constants";
 
 interface ClientApiConfig {
   id: string;
